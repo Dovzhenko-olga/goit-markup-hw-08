@@ -1,0 +1,58 @@
+/* clients */
+.clients {
+    display: flex;
+    
+    @media screen and (max-width: 1199px) {
+        margin: -15px;
+        flex-wrap: wrap;
+    }    
+    
+    .item {
+        width: calc((100% - 2 * 30px) / 2);
+
+        @media screen and (max-width: 1199px) {
+        margin: 15px;
+        }
+        
+        @media screen and (min-width: $tablet) {
+            width: 226px;
+        }
+        @media screen and (min-width: $desktop) {
+            width: 170px;
+        }
+
+        &:not(:last-child) {
+            @media screen and (min-width: $desktop) {
+            margin-right: 30px;
+            }
+        }
+    }
+}
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 210px;
+    height: 90px;
+    color: #AFB1B8;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+
+
+
+    transition: color 250ms $timing-function, border-color 250ms $timing-function;
+
+    &:hover, &:focus {
+        color: $hover-color;
+        border-color: $hover-color;
+    }
+}
+.icon-clients {
+    fill: currentColor;
+}
+.partners {
+    padding-top: 60px;
+    @media screen and (min-width: $desktop){
+        padding-top: 94px;
+        }
+}

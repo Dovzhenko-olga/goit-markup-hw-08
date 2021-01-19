@@ -1,0 +1,105 @@
+/*  team */
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: $title-text-color;
+    font-weight: $font-weight-bold;
+    line-height: 1.17;
+    text-align: center;
+    font-size: 28px;
+
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.67;
+    }
+}
+
+.team {
+    background-color: $gray-back-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    .item {
+        width: 450px;        
+        text-align: center;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
+    }
+
+    .item:not(:last-child) {
+        margin-bottom: 30px;
+
+        &:nth-child(2n+1) {
+            @media screen and (min-width: $tablet) {
+                margin-right: 30px;
+            }
+        }
+
+        &:nth-last-child(-n+2) {
+            @media screen and (min-width: $tablet) {
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: $desktop){
+        margin-right: 30px;
+        margin-bottom: 0;
+        }
+    }
+}
+.workers {
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    }
+}
+.workers-info {
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-bottom: 24px;
+    padding-left: 10px;
+    background-color: $primary-white-color;
+
+    @media screen and (min-width: $desktop){
+        padding-bottom: 30px;
+    }
+}
+.team img {
+    display: block;
+    width: 450px;
+    @media screen and (min-width: $tablet) {
+        width: 354px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 270px;
+    }
+}
+.names {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: $title-text-color;
+    font-weight: 500;
+    line-height: 1.19;
+    font-size: 16px;
+}
+.proffeshion {   
+    margin-bottom: 16px; 
+    font-size: 16px;
+    line-height: 1.19;
+}

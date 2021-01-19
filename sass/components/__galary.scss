@@ -1,0 +1,99 @@
+/* portfolio */
+
+.portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/*  galary */
+
+.work-list {
+
+    @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .title {
+        color: $title-text-color;
+        font-weight: $font-weight-bold;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+        margin-top: 0;
+        margin-bottom: 4px;
+    }
+}
+
+.work-item {
+    background-color: $primary-white-color;
+    width: 450px;
+
+    @media screen and (min-width: $desktop) {
+    width: calc((100% - 60px) / 3);
+    
+    &:not(:nth-child(3n)) {
+        margin-right: 30px;
+    }
+    &:not(:nth-last-child(-n+3)) {
+        margin-bottom: 30px;
+    }
+}
+}
+
+.work-link {
+    display: block;
+    
+    transition: box-shadow 250ms $timing-function;
+    
+    &:hover, &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    
+    &:hover .image-overlay,
+    &:focus .image-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-item img {
+    display: block;
+}
+.work-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: $primary-white-color;
+    background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transition: opacity 250ms $timing-function, transform 250ms $timing-function;
+}
+.work-content {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    border-left: 1px solid $border-gray-color;
+    border-right: 1px solid $border-gray-color;
+    border-bottom: 1px solid $border-gray-color;
+
+    p {
+        color: $primary-text-color;
+        font-size: 16px;
+        line-height: 1.87;
+    }
+}
