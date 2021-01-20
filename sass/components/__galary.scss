@@ -34,14 +34,16 @@
     background-color: $primary-white-color;
     width: 450px;
 
+    @media screen and (max-width: 1199px) {
+        &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    }
     @media screen and (min-width: $tablet) and (max-width: 1199px) {
         width: calc((100% - 30px) / 2);
 
         &:not(:nth-child(2n)) {
             margin-right: 30px;
-        }
-        &:not(:last-child) {
-            margin-bottom: 30px;
         }
     }
 
@@ -73,9 +75,6 @@
     }
 }
 
-.work-item img {
-    display: block;
-}
 .work-image {
     position: relative;
     overflow: hidden;
@@ -106,6 +105,10 @@
     border-left: 1px solid $border-gray-color;
     border-right: 1px solid $border-gray-color;
     border-bottom: 1px solid $border-gray-color;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        padding-right: 12px;
+    }
 
     p {
         color: $primary-text-color;
