@@ -1361,7 +1361,7 @@ li p {
 
 .work-item {
   background-color: #ffffff;
-  width: 450px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1199px) {
