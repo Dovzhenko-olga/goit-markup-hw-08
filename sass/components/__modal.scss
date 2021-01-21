@@ -3,12 +3,15 @@
     top: 50%;
     left: 50%;
 
-    width: 450px;
-    height: 609px;
+    max-width: 100%;
     padding: 40px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     
+    @media screen and (min-width: $mobile) {
+        width: 450px;
+        height: 609px;
+    }
     @media screen and (min-width: $desktop) {
         width: 528px;
         height: 581px;
@@ -141,10 +144,9 @@
 }
 .agreement {
     display: flex;
-    justify-content: center;
     margin-bottom: 30px;
     font-style: normal;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 1.17;
     color: $primary-text-color;
 
@@ -156,7 +158,9 @@
 .check {
     display: flex;
     align-items: center;
-
+    white-space: pre-wrap;
+    
+    
     &::before {
         display: inline-block;
         content: '';
@@ -165,10 +169,10 @@
         margin-right: 8px;
         background-image: url(../images/checkbox.svg);
         fill: $title-text-color;
-    
+        
         transition: fill 250ms $timing-function,
-            background-color 250ms $timing-function,
-            background-image 250ms $timing-function;
+        background-color 250ms $timing-function,
+        background-image 250ms $timing-function;
     }
 }
 .checkbox:checked + .check::before {
@@ -179,9 +183,9 @@
 .agreement label {
     position: relative;
     display: block;
-
+    
     @media screen and (min-width: $desktop) {
-    padding-left: 12px;
+        padding-left: 12px;
     }
 }
 .agreement a {
