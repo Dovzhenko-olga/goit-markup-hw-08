@@ -40,8 +40,10 @@
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: baseline;
+        @media screen and (max-width: 1199px) {
         margin-left: 61px;
         margin-right: 74px;
+        }
     }
 }
 .contact-us {
