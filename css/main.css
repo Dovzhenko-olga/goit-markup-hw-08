@@ -866,6 +866,8 @@ li p {
   .footer-contact {
     display: flex;
     align-items: baseline;
+    margin-left: 61px;
+    margin-right: 74px;
   }
 }
 
