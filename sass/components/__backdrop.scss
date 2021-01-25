@@ -11,6 +11,10 @@
     opacity: 1;
     transition: opacity 250ms $timing-function;
     overflow-y: scroll;
+    
+    @media screen and (max-width: 479px) {
+    padding: 94px 5px;
+}
 }
 .backdrop.is-hidden {
     visibility: hidden;
