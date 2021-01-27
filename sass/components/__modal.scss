@@ -154,7 +154,7 @@
     display: flex;
     margin-bottom: 30px;
     font-style: normal;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 1.17;
     color: $primary-text-color;
 
@@ -165,6 +165,7 @@
 }
 .check {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     white-space: pre-wrap;
     
@@ -174,7 +175,7 @@
         content: '';
         width: 16px;
         height: 15px;
-        margin-right: 8px;
+        margin-right: 7px;
         background-image: url(../images/checkbox.svg);
         fill: $title-text-color;
         
